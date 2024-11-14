@@ -1,10 +1,10 @@
-import os
+from os import environ
 
-import praw
+from praw import Reddit
 
-reddit = praw.Reddit(
-    client_id=os.environ["ID"],
-    client_secret=os.environ["SECRET"],
+reddit = Reddit(
+    client_id=environ["ID"],
+    client_secret=environ["SECRET"],
     user_agent="tork:1.0.0:u/czenty",
 )
 
